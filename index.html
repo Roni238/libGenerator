@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="none">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Генератор ключей</title>
+</head>
+<body>
+    <div>
+        Количество символов:<br>
+        <input type="text" id="quantidade" value="2"><br>
+        Символы:<br>
+        <input type="text" id="dicionario" value="0123456789"><br>
+        <button onclick="botao()">Старт</button>
+    </div>
+    <div>
+        Библиотека:<br>
+        <textarea id="lib"></textarea><br>
+        
+        <b id="speed"></b> 
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
