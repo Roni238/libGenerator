@@ -1,13 +1,13 @@
-function createFor(d,q,cb){ 
+function createFor(Symbol,long,cb){ 
 	
-	var a = d.split('')
+	var a = Symbol.split('')
 	var f=''
 	var f1=''
 	var ni=''
 	var fc=''
 
 
-	for (var i = 0; i < q; i++) {
+	for (var i = 0; i < long; i++) {
 		f +=  'for(var i'+i+' = 0; i'+i+' < a.length; i'+i+'++){'
 		if(i>0){ ni += '+'}
 		ni += 'a[i'+i+']'
@@ -17,25 +17,18 @@ function createFor(d,q,cb){
 	eval(fc)
 }
 
-function testar(s){
-	console.log(s)
-}
 
-
-function testar2(s){
+function go(s){
 	document.querySelector('#lib').innerHTML += s+' '
 }
 
 
 
-function botao(){
-	let dic = document.querySelector('#dicionario').value
-  	let qc = document.querySelector('#quantidade').value
-
+function start(){
+	let Symbol = document.querySelector('#symbol').value
+  	let long = document.querySelector('#long').value
   	let start = new Date();
-  	
-  	createFor(dic,qc,'testar2')
-  	
+	createFor(Symbol,long,'go') 
   	let time = new Date() - start;
 	document.querySelector('#speed').innerHTML = 'Выполненно за: '+time+' ms'
 }
